@@ -1,0 +1,71 @@
+Python notes
+
+
+
+
+Functions
+
+*args
+- Allows functioin to accept any number of positional arguments
+e.g. def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus") 
+
+**kwargs (keyword arguments)
+- feeds the function a dictioanry of arguments
+- Allows functioin to accept any number of keyword arguments
+e.g. def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes") 
+
+* and ** can also be sued when calling function, to unpack them
+- * for lists
+- ** for dicts
+
+
+Modules
+- is code library
+- file containing set of funcs
+-save the fun as a .py file
+- modules can be imported e.g. import random
+- modules cna contain variables of all types
+- When importing module, you can create an alias e.g. import numpy as np
+- dir() func lists all function/variable names in module
+- import directly from module e.g. from numpy import x
+
+Files
+
+Handling
+- open()
+    - r : Read
+    - a: append
+    - w: write
+    - x: create
+    - t: text mode
+    - b: binary mode
+e.g. f = open("demofile.txt")
+     print(f.read()) 
+
+If file in different location, path needs specifying
+f = open("D:\\myfiles\welcome.txt")
+print(f.read()) 
+
+Use with statement to not have to worry about  closing Files
+with open("demofile.txt") as f:
+  print(f.read()) 
+
+f.close() to close file
+
+read() can be used for whole file or read(5) would read first 5 chars
+f.readline(i) - read specified number of lines
+
+f.write() - overwrites existing content
+f.append() - appends to end
+
+To delete fiels import os module
+- use os.remove() func
+- check file exists os.path.exists()
+- delte folder os.rmdir()
+    - only empty fodlers cna be deleted
