@@ -24,7 +24,7 @@ import numpy as np
 
 #Initialize PID controller
 setpoint = 100
-pid = PIDController(Kp=0.5, Ki=0.1, Kd=0.1, setpoint=setpoint)
+pid = PIDController(Kp=0., Ki=0., Kd=0.1, setpoint=setpoint)
 #Simulation parameters
 time = np.linspace(0, 10, 100) # 10 seconds, 100 points
 
